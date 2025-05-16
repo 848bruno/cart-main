@@ -1,4 +1,3 @@
-
 .container {
   font-family: Arial, sans-serif;
   max-width: 1200px;
@@ -29,7 +28,13 @@
   overflow: hidden;
   background: #fff;
   text-align: center;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.87);}
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.87);
+  position: relative;
+}
+
+.dessert-card.selected {
+  border: 2px solid #ff6347; /* Change border color when selected */
+}
 
 .dessert-card img {
   width: 100%;
@@ -47,14 +52,14 @@
 
 .info p {
   margin: 0 0 10px;
-  color:#ff6347;
+  color: #ff6347;
   text-size-adjust: 100%;
 }
 
-.info button {
-  background:  rgb(243, 212, 212);
-  color:#ff6347;
-  border:  1px solid #ff6347;;
+.info button.add-to-cart {
+  background: rgb(243, 212, 212);
+  color: #ff6347;
+  border: 1px solid #ff6347;
   padding: 5px 10px;
   border-radius: 5px;
   cursor: pointer;
@@ -63,12 +68,32 @@
   align-items: center;
   justify-content: center;
   gap: 5px;
-  box-shadow:  0 2px 5px rgba(0, 0, 0, 0.815);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.815);
 }
 
-.info button img {
+.info button.add-to-cart.active {
+  background: #ff6347;
+  color: white;
+  border: 1px solid #ff6347;
+}
+
+.info button.add-to-cart img {
   width: 16px;
   height: 16px;
+}
+
+.info button.add-to-cart .decrement,
+.info button.add-to-cart .increment {
+  flex: 1;
+  cursor: pointer;
+  font-size: 18px;
+  text-align: center;
+  user-select: none; /* Prevent text selection */
+}
+
+.info button.add-to-cart .quantity {
+  flex: 2;
+  text-align: center;
 }
 
 .cart-section {
@@ -79,14 +104,13 @@
   border: 1px solid #ddd;
   padding: 10px;
   border-radius: 5px;
- 
   height: fit-content;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.815);
 }
 
 .cart-section h2 {
   margin: 0 0 10px;
-   color: #ff6347;
+  color: #ff6347;
 }
 
 .cart-items {
