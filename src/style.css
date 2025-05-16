@@ -48,6 +48,7 @@
 .info p {
   margin: 0 0 10px;
   color:#ff6347;
+  text-size-adjust: 100%;
 }
 
 .info button {

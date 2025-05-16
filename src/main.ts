@@ -1,3 +1,4 @@
+
 import './style.css';
 
 interface Image {
@@ -45,10 +46,9 @@ fetch('/desserts.json')
       card.innerHTML = `
         <img src="${item.image.desktop}" alt="${item.name}" data-mobile="${item.image.mobile}" data-tablet="${item.image.tablet}" data-desktop="${item.image.desktop}">
         <div class="info">
-        <button data-id="${index}"><img src="./assets/images/icon-add-to-cart.svg" alt="cart">Add to Cart</button>
+          <button data-id="${index}"><img src="./assets/images/icon-add-to-cart.svg" alt="cart">Add to Cart</button>
           <h3>${item.name}</h3>
           <p>$${item.price.toFixed(2)}</p>
-          
         </div>
       `;
       menu.appendChild(card);
@@ -103,9 +103,11 @@ function updateCart() {
   if (cartData.length === 0) {
     emptyCartImage.style.display = 'block';
     emptyCartText.style.display = 'block';
+    confirmOrder.style.display = 'none'; // Hide confirm button when cart is empty
   } else {
     emptyCartImage.style.display = 'none';
     emptyCartText.style.display = 'none';
+    confirmOrder.style.display = 'block'; // Show confirm button when cart has items
     cartData.forEach(item => {
       const li = document.createElement('li');
       li.textContent = `${item.name} x${item.quantity} - $${(item.price * item.quantity).toFixed(2)}`;
