@@ -1,30 +1,34 @@
- <!DOCTYPE html>
-     <html lang="en">
-     <head>
-       <meta charset="UTF-8">
-       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-       <title>Dessert Menu</title>
-     </head>
-     <body>
-       <div class="container">
-         <h2>Desserts</h2>
-         <div class="menu" id="menu"></div>
-         <div class="cart" id="cart">
-           <h3>Your Cart (<span id="cartCount">0</span>)</h3>
-           <ul id="cartItems"></ul>
-           <p>Total: $<span id="cartTotal">0.00</span></p>
-           <button id="confirmOrder">Confirm Order</button>
-         </div>
-         <div id="confirmationPopup" class="popup">
-           <div class="popup-content">
-             <h3>Order Confirmed</h3>
-             <p>Thank you for your order!</p>
-             <ul id="popupItems"></ul>
-             <p>Total: $<span id="popupTotal">0.00</span></p>
-             <button id="newOrder">Start New Order</button>
-           </div>
-         </div>
-       </div>
-       <script type="module" src="/src/main.ts"></script>
-     </body>
-     </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dessert Menu</title>
+</head>
+<body>
+  <div class="container">
+    <section class="dessert-section">
+      <h2>Desserts</h2>
+      <div class="dessert-grid" id="menu"></div>
+    </section>
+    <aside class="cart-section" id="cart">
+      <h2>Your Cart (<span id="cartCount">0</span>)</h2>
+      <ul id="cart-items" class="cart-items"></ul>
+      <p>Total: $<span id="total-price">0.00</span></p>
+      <button id="confirm-order">Confirm Order</button>
+      <img src="./assets/images/illustration-empty-cart.svg" alt="Empty Cart" class="cart-image" />
+      <p>Your added items will appear here</p>
+    </aside>
+    <div id="confirmationPopup" class="popup">
+      <div class="popup-content">
+        <h3>Order Confirmed</h3>
+        <p>Thank you for your order!</p>
+        <ul id="popupItems"></ul>
+        <p>Total: $<span id="popupTotal">0.00</span></p>
+        <button id="newOrder">Start New Order</button>
+      </div>
+    </div>
+  </div>
+  <script type="module" src="/src/main.ts"></script>
+</body>
+</html>
