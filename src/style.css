@@ -1,0 +1,118 @@
+.container {
+       font-family: Arial, sans-serif;
+       max-width: 800px;
+       margin: 0 auto;
+       padding: 20px;
+     }
+
+     h2 {
+       color: #brown;
+     }
+
+     .menu {
+       display: grid;
+       grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+       gap: 20px;
+     }
+
+     .menu-item {
+       border: 1px solid #ddd;
+       padding: 10px;
+       text-align: center;
+       border-radius: 5px;
+       background: #fff;
+     }
+
+     .menu-item img {
+       max-width: 100%;
+       height: auto;
+     }
+
+     .menu-item button {
+       background: #ff6347;
+       color: white;
+       border: none;
+       padding: 5px 10px;
+       border-radius: 5px;
+       cursor: pointer;
+     }
+
+     .cart {
+       position: fixed;
+       right: 20px;
+       top: 20px;
+       width: 250px;
+       background: #fff;
+       border: 1px solid #ddd;
+       padding: 10px;
+       border-radius: 5px;
+     }
+
+     .cart ul {
+       list-style: none;
+       padding: 0;
+     }
+
+     .cart li {
+       display: flex;
+       justify-content: space-between;
+       margin: 5px 0;
+     }
+
+     #confirmOrder {
+       background: #ff6347;
+       color: white;
+       border: none;
+       padding: 10px;
+       width: 100%;
+       border-radius: 5px;
+       cursor: pointer;
+     }
+
+     .popup {
+       display: none;
+       position: fixed;
+       top: 0;
+       left: 0;
+       width: 100%;
+       height: 100%;
+       background: rgba(0, 0, 0, 0.5);
+     }
+
+     .popup-content {
+       background: #fff;
+       padding: 20px;
+       border-radius: 5px;
+       position: absolute;
+       top: 50%;
+       left: 50%;
+       transform: translate(-50%, -50%);
+       text-align: center;
+     }
+
+     .popup-content button {
+       background: #ff6347;
+       color: white;
+       border: none;
+       padding: 10px 20px;
+       border-radius: 5px;
+       cursor: pointer;
+     }
+
+     @media (max-width: 768px) {
+       .menu-item img {
+         content: url("./assets/images/image-waffle-mobile.jpg");
+       }
+     }
+
+     @media (min-width: 769px) and (max-width: 1200px) {
+       .menu-item img {
+         content: url("./assets/images/image-waffle-tablet.jpg");
+       }
+     }
+
+     @media (min-width: 1201px) {
+       .menu-item img {
+         content: url("./assets/images/image-waffle-desktop.jpg");
+       }
+     }
