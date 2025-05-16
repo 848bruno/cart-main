@@ -45,9 +45,10 @@ fetch('/desserts.json')
       card.innerHTML = `
         <img src="${item.image.desktop}" alt="${item.name}" data-mobile="${item.image.mobile}" data-tablet="${item.image.tablet}" data-desktop="${item.image.desktop}">
         <div class="info">
+        <button data-id="${index}"><img src="./assets/images/icon-add-to-cart.svg" alt="cart">Add to Cart</button>
           <h3>${item.name}</h3>
           <p>$${item.price.toFixed(2)}</p>
-          <button data-id="${index}"><img src="./assets/images/icon-add-to-cart.svg" alt="cart">Add to Cart</button>
+          
         </div>
       `;
       menu.appendChild(card);
